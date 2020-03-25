@@ -19,7 +19,7 @@ function validacao_cpf_cnpj($vars){
 					$return[] = $mensagem_erro_duplicado;
 				}
 			}
-		}elseif($_SESSION["uid"] ){
+		}elseif($_SESSION["uid"]){
 			$id = $_SESSION["uid"];
 			$sql = $pdo->query("SELECT * FROM tblcustomfieldsvalues WHERE fieldid = '{$customfield_cpf_cnpj}' AND relid != '{$id}'");
 			while($exibir = $sql->fetch()){
